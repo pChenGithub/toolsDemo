@@ -1,1 +1,14 @@
 #makefile for kernel ko module
+obj-m = pwm_led.o
+KERNEL=/home/cp/sda3/cqh6_linux_debian9/linux-3.10
+#KERNEL=/home/cp/linux-BSP/source/kernel/linux-3.14.38-out/6ul-nand
+PWD=$(shell pwd)
+
+modules:
+	$(MAKE) -C $(KERNEL) M=$(PWD) modules
+	install pwm_led.ko ~/nfs
+
+.PHONEY:clean
+
+clean:
+	rm -f *.o *.ko
