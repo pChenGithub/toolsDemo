@@ -1,0 +1,10 @@
+检测ethx是否link up
+
+方案1：
+cat /sys/class/net/eth0/carrier
+
+"1"为link up 状态
+"0"为link down状态
+
+方案2：
+Netlink实现网卡上下线监控
