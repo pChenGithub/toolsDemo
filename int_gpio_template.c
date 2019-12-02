@@ -1,4 +1,12 @@
 
+
+/*
+全志的gpio算个数
+A 0-31     B 32-63     C 64-95    D 96-127  以此类推...
+举个例子: gps的standby是PD19  也就是 96+19= 115
+*/
+
+
 #include <linux/module.h>
 #include <linux/kernel.h>
 #include <linux/init.h>
