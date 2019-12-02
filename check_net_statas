@@ -8,3 +8,7 @@ cat /sys/class/net/eth0/carrier
 
 方案2：
 Netlink实现网卡上下线监控
+
+/*****************************************/
+检查网线是否插入可以查看
+/sys/class/net/eth0/carrier  文件的内容。 1 表示网线有插入， 0 表示没接网线。
